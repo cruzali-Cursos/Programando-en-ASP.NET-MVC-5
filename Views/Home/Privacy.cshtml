@@ -1,0 +1,32 @@
+﻿@model List<WebCore01.Models.Pelicula>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+    ViewBag.Title = "";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h1>@ViewBag.Message</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Duración</th>
+            <th>País</th>
+            <th>Lanzamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pelicula in Model)
+        {
+            <tr>
+                <td>@pelicula.Titulo</td>
+                <td>@pelicula.Duracion</td>
+                <td>@pelicula.Pais</td>
+                <td>@pelicula.Publicacion</td>
+            </tr>
+        }
+    </tbody>
+</table>
